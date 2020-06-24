@@ -61,6 +61,7 @@
         self.auView = [[AUGenericView alloc] initWithAudioUnit:node.audioUnit displayFlags:(AUViewPropertiesDisplayFlag | AUViewParametersDisplayFlag)];
     }
     else {
+        NSLog(@"Preferred size: %@", NSStringFromSize(viewController.preferredContentSize));
         [self addChildViewController:viewController];
         self.auView = viewController.view;
     }
